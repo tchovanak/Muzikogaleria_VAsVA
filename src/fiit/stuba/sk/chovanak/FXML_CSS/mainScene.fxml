@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.*?>
+
+<AnchorPane styleClass="theme" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fiit.stuba.sk.chovanak.VIEW_CONTROLLERS.MainSceneController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Button fx:id="btnPlay" layoutX="24.0" layoutY="262.0" mnemonicParsing="false" onAction="#playFile" prefWidth="59.0" text="Play" />
+    <Pane layoutX="24.0" layoutY="38.0" prefHeight="200.0" prefWidth="336.0" styleClass="media-view">
+      <children>
+        <MediaView fx:id="mediaView" disable="false" fitHeight="179.33334221777977" fitWidth="320.0" focusTraversable="false" layoutX="8.0" layoutY="10.0" styleClass="media-view" />
+      </children>
+      <stylesheets>
+        <URL value="@media-view.css" />
+      </stylesheets>
+    </Pane>
+    <Button fx:id="btnOpen" layoutX="445.0" layoutY="38.0" mnemonicParsing="false" onAction="#openMediaFile" prefHeight="36.0" prefWidth="79.0" text="Open" />
+    <Button fx:id="btnEQ" layoutX="445.0" layoutY="88.0" mnemonicParsing="false" onAction="#showEqualizer" prefHeight="36.0" prefWidth="79.0" text="EQ" />
+    <Button fx:id="btnPause" layoutX="99.0" layoutY="262.0" mnemonicParsing="false" onAction="#pauseFile" text="pause" />
+    <Slider fx:id="sldVolume" layoutX="394.0" layoutY="68.0" onMouseClicked="#updateVolume" orientation="VERTICAL" />
+    <Label layoutX="382.0" layoutY="46.0" text="Volume" />
+    <Button fx:id="btnStop" layoutX="178.0" layoutY="262.0" mnemonicParsing="false" onAction="#stopFile" text="Stop" />
+  </children>
+  <padding>
+    <Insets bottom="150.0" left="200.0" right="500.0" top="400.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@Muzikogaleria.css" />
+    <URL value="@media-view.css" />
+  </stylesheets>
+</AnchorPane>

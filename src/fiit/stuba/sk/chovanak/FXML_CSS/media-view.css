@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+.media-view {
+   
+	 master-color: #000000;
+    -fx-background-color: derive(master-color, 70%);
+    -fx-font-size: 14px;
+     -fx-border-width: 10;
+      -fx-border-color: #500000;
+     
+}

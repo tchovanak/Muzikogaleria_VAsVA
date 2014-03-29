@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchor" layoutX="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="331.0" styleClass="theme" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fiit.stuba.sk.chovanak.VIEW_CONTROLLERS.AddToDatabaseController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <HBox layoutX="369.0" layoutY="14.0" prefHeight="59.0" prefWidth="351.0" spacing="15.0">
+      <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+    </HBox>
+    <TextField fx:id="txtNameOfSong" layoutX="46.0" layoutY="88.0" prefHeight="27.0" prefWidth="246.0" promptText="názov skladby" styleClass="text-field">
+      <stylesheets>
+        <URL value="@Muzikogaleria.css" />
+      </stylesheets>
+    </TextField>
+    <TextField fx:id="txtAuthorOfSong" layoutX="46.0" layoutY="128.0" prefHeight="27.0" prefWidth="246.0" promptText="autor skladby" />
+    <TextField fx:id="txtMoodOfSong" layoutX="46.0" layoutY="171.0" prefHeight="27.0" prefWidth="246.0" promptText="nálada skladby" />
+    <Button fx:id="addToDatabase" layoutX="46.0" layoutY="290.0" mnemonicParsing="false" onAction="#addToDatabase" prefHeight="45.0" prefWidth="246.0" styleClass="button" text="Pridaj skladbu" />
+    <ChoiceBox id="choice-box" layoutX="46.0" layoutY="210.0" prefHeight="27.0" prefWidth="245.9998779296875">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+      <stylesheets>
+        <URL value="@Muzikogaleria.css" />
+      </stylesheets>
+    </ChoiceBox>
+    <ComboBox layoutX="46.0" layoutY="251.0" prefWidth="246.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+  </children>
+  <padding>
+    <Insets />
+  </padding>
+  <stylesheets>
+    <URL value="@Muzikogaleria.css" />
+  </stylesheets>
+</AnchorPane>
