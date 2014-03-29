@@ -1,31 +1,49 @@
 package fiit.stuba.sk.chovanak.DB_ENTITS;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "song")
 public class Song {
 
 	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
+	@Column(name = "name")
 	private String name;
 	
+	@Column(name = "filesystem_path")
 	private String filesystem_path;
 	
+	@Column(name = "num_of_plays")
 	private int number_of_plays;
 	
+	@Column(name = "popularity")
+	private int popularity;
+	
 	@ManyToOne
+	@JoinColumn(name = "id")
 	private Mood mood;
 	
 	@ManyToOne
+	@JoinColumn(name = "id")
 	private Genre genre;
 	
 	@ManyToOne
+	@JoinColumn(name = "id")
 	private Popularity popularity;
 	
 	@ManyToOne
+	@JoinColumn(name = "id")
 	private Album album;
 
 	public int getId() {
@@ -91,7 +109,5 @@ public class Song {
 	public void setAlbum(Album album) {
 		this.album = album;
 	}
-	
-	
-	
+		
 }
